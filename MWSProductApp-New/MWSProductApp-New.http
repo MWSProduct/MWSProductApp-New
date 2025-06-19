@@ -1,0 +1,6 @@
+@MWSProductApp_New_HostAddress = http://localhost:5095
+
+GET {{MWSProductApp_New_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

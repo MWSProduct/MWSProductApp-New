@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MWSProductApp-New\MWSProductApp-New.csproj" />
+    <ProjectReference Include="..\MWSProductApp.Common\MWSProductApp.Common.csproj" />
+    <ProjectReference Include="..\MWSProductApp.Contract\MWSProductApp.Contract.csproj" />
+    <ProjectReference Include="..\MWSProductApp.Core\MWSProductApp.Core.csproj" />
+  </ItemGroup>
+
+</Project>
