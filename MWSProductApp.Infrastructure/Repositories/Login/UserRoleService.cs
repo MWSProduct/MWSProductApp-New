@@ -52,5 +52,5 @@ public class UserRoleService : IUserRoleRepository
             _context.Database.CloseConnection();
         }
 
-    }
+    }   
 }

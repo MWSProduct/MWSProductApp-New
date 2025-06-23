@@ -9,6 +9,7 @@ using MWSProductApp.Common.Constants;
 using MWSProductApp.Contract.Data.Login;
 using MWSProductApp.Model;
 using MWSProducts;
+using MWSProductApp.DTO;
 namespace MWSProductApp.Infrastructure.Repositories.Login;
 
 public class UserRegisterRepo : IUserRepository
@@ -110,47 +111,7 @@ public class UserRegisterRepo : IUserRepository
     //        _context.Database.CloseConnection();
     //    }
     //}
-    public void GenerateUserCredentials(string emailId, MWSUserRegister mWSUserRegister)
-    {
-        if (string.IsNullOrEmpty(emailId))
-        {
-            throw new ArgumentNullException(nameof(emailId));
-        }
-        if (mWSUserRegister == null)
-        {
-            throw new ArgumentNullException(nameof(mWSUserRegister));
-        }
-        using (var command = _context.Database.GetDbConnection().CreateCommand())
-        {
-            command.CommandText = SpConstants.spGenerateUserDetails;
-            command.CommandType = CommandType.StoredProcedure;
-
-            string JsonData = JsonConvert.SerializeObject(mWSUserRegister);
-            var userDetails = new SqlParameter("@json", SqlDbType.NVarChar)
-            {
-                Direction = ParameterDirection.Input,
-                Value = JsonData ?? (object)DBNull.Value
-            };
-            var exsitsRegister = new SqlParameter("@ExistsRegister", SqlDbType.Bit)
-            {
-                Direction = ParameterDirection.Output
-
-            };
-            var exsitsPassWord = new SqlParameter("@ExistsPassword", SqlDbType.Bit)
-            {
-                Direction = ParameterDirection.Output
-
-            };
-            command.Parameters.Add(userDetails);
-            command.Parameters.Add(exsitsRegister);
-            command.Parameters.Add(exsitsPassWord);
-            _context.Database.OpenConnection();
-            command.ExecuteNonQuery();
-            var existsRegister = (bool)exsitsRegister.Value;
-            var existsPassword = (bool)exsitsPassWord.Value;
-
-        }       
-    }
+    
 
     public Task<object> GetAll()
     {

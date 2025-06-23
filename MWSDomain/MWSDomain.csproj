@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MWSProductApp-New\MWSProductApp-New.csproj" />
-  </ItemGroup>
-
 </Project>

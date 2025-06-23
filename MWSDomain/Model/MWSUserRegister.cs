@@ -2,7 +2,7 @@
 using MediatR;
 namespace MWSProductApp.Model
 {
-    public class MWSUserRegister:IRequest<bool>
+    public class MWSUserRegister:IRequest<string>
     {
         [Key]
         public string? UserRegisterId { get; set; }

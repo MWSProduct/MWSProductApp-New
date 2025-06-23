@@ -5,7 +5,7 @@ using MWSProductApp.Model;
 namespace MWSProductApp.DTO
 {
 
-        public class MWSUserRegisterDTO:IRequest<bool>
+        public class MWSUserRegisterDTO:IRequest<string>
         {
                 public string? UserRegisterId { get; set; }
                 public string? Role { get; set; }

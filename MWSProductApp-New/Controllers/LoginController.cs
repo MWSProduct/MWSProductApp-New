@@ -1,23 +1,27 @@
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using MWSProductApp.Core.Command.Login;
+using MWSProductApp.DTO;
 
 
 namespace MWSProductApp.Controllers
 {
 [ApiController]
 [Route("api/[controller]")]
-    public class LoginController : Controller
-    {        
-        [HttpPost]
-        public IActionResult Index(string username, string password)
+    public class LoginController : ControllerBase
+    {
+        public readonly IMediator _mediator;    
+        public LoginController(IMediator mediator)
         {
+            _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
+        }  
+        [HttpPost]
+        public async Task<IActionResult> CreateMWSUser([FromBody]MWSUserRegisterDTO mWSUserRegisterDTO)
+        {
+            var command = new UserRegisterCommand(mWSUserRegisterDTO);
+            var result = await _mediator.Send(command);
 
-            if (username == "admin" && password == "password") 
-            {
-                return RedirectToAction("Index", "Home");
-            }
-
-            ViewBag.Error = "Invalid credentials";
-            return View();
+            return Ok(result);
         }
     }
 }

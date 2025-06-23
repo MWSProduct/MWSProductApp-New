@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWSProductApp.Infrastructur
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWSProductApp.Core", "MWSProductApp.Core\MWSProductApp.Core.csproj", "{1063C67F-91BE-4050-BCD4-B7C83683F850}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MWSDomain", "MWSDomain\MWSDomain.csproj", "{F58C7ECF-840E-4987-BD48-C115B43FFE15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{1063C67F-91BE-4050-BCD4-B7C83683F850}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1063C67F-91BE-4050-BCD4-B7C83683F850}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1063C67F-91BE-4050-BCD4-B7C83683F850}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F58C7ECF-840E-4987-BD48-C115B43FFE15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F58C7ECF-840E-4987-BD48-C115B43FFE15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F58C7ECF-840E-4987-BD48-C115B43FFE15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F58C7ECF-840E-4987-BD48-C115B43FFE15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

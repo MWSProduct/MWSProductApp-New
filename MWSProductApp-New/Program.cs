@@ -12,6 +12,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
 using System.Net.Http;
+using MediatR;
 
 
 namespace MWSProductApp
@@ -28,6 +29,8 @@ namespace MWSProductApp
                 options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+                    builder.Services.AddMediatR(cfg =>
+                cfg.RegisterServicesFromAssembly(typeof(Program).Assembly));
 
             var app = builder.Build();
 
