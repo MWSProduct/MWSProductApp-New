@@ -13,5 +13,5 @@ public class DataDbContext : DbContext
     public DbSet<MWSRoles> tbl_refRoles { get; set; }
     public DbSet<MWSSetPassword> tbl_UserSetPassWord { get; set; }
     public DbSet<MWSUserRegister> tbl_UserRegister { get; set; }
-    public DbSet<MWSUserRoles> tbl_UserRoles { get; set; }             
+    // public DbSet<MWSUserRoles> tbl_UserRoles { get; set; }             
     }

@@ -1,9 +1,10 @@
 using System;
+using MediatR;
 using MWSProductApp.DTO;
 
 namespace MWSProductApp.Core.Command.Login
 {
-    public class UserRegisterCommand
+    public class UserRegisterCommand:IRequest<bool>
     {
         public MWSUserRegisterDTO mWSUserRegisterDTO { get; }
         public UserRegisterCommand(MWSUserRegisterDTO mWSUserRegisterDTO)

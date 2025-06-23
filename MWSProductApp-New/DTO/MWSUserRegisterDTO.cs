@@ -1,10 +1,11 @@
 using System;
+using MediatR;
 using MWSProductApp.Model;
 
 namespace MWSProductApp.DTO
 {
 
-        public class MWSUserRegisterDTO
+        public class MWSUserRegisterDTO:IRequest<bool>
         {
                 public string? UserRegisterId { get; set; }
                 public string? Role { get; set; }

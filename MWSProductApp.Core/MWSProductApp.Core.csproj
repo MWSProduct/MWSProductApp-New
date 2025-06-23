@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MWSProductApp-New\MWSProductApp-New.csproj" />
+    <ProjectReference Include="..\MWSProductApp.Contract\MWSProductApp.Contract.csproj" />
   </ItemGroup>
 
 </Project>

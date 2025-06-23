@@ -6,13 +6,7 @@ namespace MWSProductApp.Controllers
 [ApiController]
 [Route("api/[controller]")]
     public class LoginController : Controller
-    {
-        [HttpGet]
-        public IActionResult Index()
-        {
-            return View();
-        }
-
+    {        
         [HttpPost]
         public IActionResult Index(string username, string password)
         {

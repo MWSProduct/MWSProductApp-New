@@ -1,7 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using MediatR;
 namespace MWSProductApp.Model
 {
-    public class MWSUserRegister
+    public class MWSUserRegister:IRequest<bool>
     {
         [Key]
         public string? UserRegisterId { get; set; }
