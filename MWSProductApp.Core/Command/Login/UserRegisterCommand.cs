@@ -1,14 +1,16 @@
 using System;
+using MediatR;
 using MWSProductApp.DTO;
+using MWSProductApp.Model;
 
 namespace MWSProductApp.Core.Command.Login
 {
-    public class UserRegisterCommand
+    public class UserRegisterCommand:IRequest<string>
     {
-        public MWSUserRegisterDTO mWSUserRegisterDTO { get; }
-        public UserRegisterCommand(MWSUserRegisterDTO mWSUserRegisterDTO)
+        public MWSUserRegisterDTO mWSUserRegister { get; }
+        public UserRegisterCommand(MWSUserRegisterDTO mWSUserRegister)
         {
-            this.mWSUserRegisterDTO = mWSUserRegisterDTO ?? throw new ArgumentNullException(nameof(mWSUserRegisterDTO));
+            this.mWSUserRegister = mWSUserRegister ?? throw new ArgumentNullException(nameof(mWSUserRegister));
         }
 
     }

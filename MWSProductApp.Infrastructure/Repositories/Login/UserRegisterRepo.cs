@@ -9,6 +9,7 @@ using MWSProductApp.Common.Constants;
 using MWSProductApp.Contract.Data.Login;
 using MWSProductApp.Model;
 using MWSProducts;
+using MWSProductApp.DTO;
 namespace MWSProductApp.Infrastructure.Repositories.Login;
 
 public class UserRegisterRepo : IUserRepository
@@ -110,7 +111,7 @@ public class UserRegisterRepo : IUserRepository
     //        _context.Database.CloseConnection();
     //    }
     //}
-    public void GenerateUserCredentials(string emailId, MWSUserRegister mWSUserRegister)
+    public void GenerateUserCredentials(string emailId, MWSUserRegisterDTO mWSUserRegister)
     {
         if (string.IsNullOrEmpty(emailId))
         {

@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MWSProductApp-New\MWSProductApp-New.csproj" />
-    <ProjectReference Include="..\MWSProductApp.Core\MWSProductApp.Core.csproj" />
   </ItemGroup>
 
 </Project>
