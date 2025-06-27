@@ -4,8 +4,8 @@ namespace MWSProductApp.Model
     public class MWSRefreshToken
     {
         [Key]
-        public string? RefreshTokenId { get; set; }
-        public string? UserId { get; set; }
+        public string? RefreshTokenGuid { get; set; }
+        public string? UserGuid { get; set; }
         public string? Token { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime ExpiryDate { get; set; }

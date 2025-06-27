@@ -5,7 +5,7 @@ namespace MWSProductApp.Model
     public class MWSUserRegister:IRequest<string>
     {
         [Key]
-        public string? UserRegisterId { get; set; }
+        public string? UserGuid { get; set; }
         public string? Role { get; set; }
         public string? FirstName { get; set; }
         public string? MiddleName { get; set; }
@@ -18,7 +18,6 @@ namespace MWSProductApp.Model
         public string? MaritalStatus { get; set; }
         public string? EmailAddress { get; set; }
         public string? PhoneNumber { get; set; }
-        public string? UserId { get; set; }
         public MWSSetPassword? MWSSetPassword { get; set; }
 
     }

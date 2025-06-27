@@ -4,7 +4,7 @@ namespace MWSProductApp.Model
     public class MWSSetPassword
     {
         [Key]
-        public string? UserId { get; set; }
+        public string? UserGuid { get; set; }
         public string? Password { get; set; }
         public string? ConfirmPassword { get; set; }
         public string? Security_Question_1 { get; set; }

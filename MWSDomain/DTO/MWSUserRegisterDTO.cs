@@ -7,7 +7,7 @@ namespace MWSProductApp.DTO
 
         public class MWSUserRegisterDTO:IRequest<string>
         {
-                public string? UserRegisterId { get; set; }
+                public string? UserGuid { get; set; }
                 public string? Role { get; set; }
                 public string? FirstName { get; set; }
                 public string? MiddleName { get; set; }
@@ -19,8 +19,7 @@ namespace MWSProductApp.DTO
                 public string? Gender { get; set; }
                 public string? MaritalStatus { get; set; }
                 public string? EmailAddress { get; set; }
-                public string? PhoneNumber { get; set; }
-                public string? UserId { get; set; }
+                public string? PhoneNumber { get; set; }                
                 public MWSSetPassword? MWSSetPassword { get; set; }
 
 
